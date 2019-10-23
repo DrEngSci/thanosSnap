@@ -27,7 +27,7 @@ $(function(){
       for (let i = 0; i < canvasCount; i++) {
         let c = newCanvasFromImageData(imageDataArray[i], canvas.width, canvas.height);
         c.classList.add("dust");
-        $("body").append(c);
+        $(this).append(c);
       }
       //Animasyonu oluşturuyoruz, fadeOut jquery kütüphanesinden geliyo
       $(this).parents(".title").children().not(".dust").fadeOut(1500); // WARNING: FADEOUT DİKKAT ET!!
@@ -43,7 +43,7 @@ $(function(){
       $(".dust").each( function(index){
         animateBlur($(this),0.8,800);
         setTimeout(() => {
-        animateTransform($(this),100,-100,chance.integer({ min: -15, max: 15 }),400+(110*index)); 
+        animateTransform($(this),100,-100,chance.integer({ min: -15, max: 15 }),400+(110*index));
         }, 70*index);
         $(this).delay(50*index).fadeOut((100*index),"easeInQuint",()=> {$(this).remove();});
 
@@ -52,6 +52,7 @@ $(function(){
   }
   $(".spanCss").click(myFunc);
   $(".spanCss").click(myAudio);
+  $("#snapHandButton").click(snapHand);
 });
 
 function myAudio() {
@@ -60,25 +61,21 @@ function myAudio() {
       audio.play();
 }
 
-function trick() {
+function snapHand() {
   if(handAnim == 0) {
-      console.log('thanos');
       let audio = new Audio('audio/trick.mov');
       audio.loop = false;
       audio.play();
-      gauntlet.src = 'img/2.png';
+      snapHandButton.src = 'img/2.png';
       setTimeout(function() {
-          gauntlet.src = 'img/3.png';
+          snapHandButton.src = 'img/3.png';
       },400)
       setTimeout(function() {
-          gauntlet.src = 'img/4.png';
+          snapHandButton.src = 'img/4.png';
       },1000)
       setTimeout(function() {
-          gauntlet.src = 'img/5.png';
+          snapHandButton.src = 'img/5.png';
       },1200)
-      handAnim = 1;
-  } else {
-      handAnim = 0;
   }
 }
 

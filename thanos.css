@@ -45,7 +45,7 @@ body {
   max-width: 700px;
   width: 100%;
   margin: 0 auto;
-  padding: 10px 2%;
+  margin-top: 10px;
 }
 .title .heading{
   display: block;
@@ -87,7 +87,7 @@ body {
   margin-left: 300px;
 }
 
-#start-btn{
+#snapHandButton{
   display: block;
   background-color: white;
   background-image: url(img/1.png);
@@ -98,6 +98,5 @@ body {
 
 .dust {
   position: absolute;
-  margin-left: 150px;
-
+  margin-left: -710px;
 }
