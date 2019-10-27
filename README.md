@@ -4,4 +4,6 @@ My code is simply the sum up of these two, to understand the logic check out the
 
 I need to improve more!
 
+There are some bugs to need fix.
+
 ![Screenshot]()
