@@ -6,4 +6,6 @@ I need to improve more!
 
 There are some bugs to need fix.
 
-![Screenshot]()
+ScreenShot
+
+![gitresim](https://user-images.githubusercontent.com/46845639/67633394-66959880-f8c0-11e9-99bc-98456b433329.png)
